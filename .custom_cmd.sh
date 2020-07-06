@@ -19,3 +19,12 @@ function set_origin(){
     read -p "enter the url of new remote origin: " newurl
     git remote set-url origin $newurl
 }
+
+function hask_new_proj(){
+    read -p "enter the name of the project file": filename
+    stack new $filename
+    cd $filename
+    stack setup
+    stack build
+    stack exec $filename-exe
+}
