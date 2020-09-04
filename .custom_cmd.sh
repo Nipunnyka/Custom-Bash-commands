@@ -28,3 +28,9 @@ function hask_new_proj(){
     stack build
     stack exec $filename-exe
 }
+
+function jflap(){
+    cd
+    cd TOC
+    java -jar JFLAP7.1.jar
+}
